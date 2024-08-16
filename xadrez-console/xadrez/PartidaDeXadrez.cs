@@ -23,7 +23,7 @@ namespace xadrez
             colocarPecas();
 
         }
-        public void ralaizaJogada(Posicao origem, Posicao destino)
+        public void realaizaJogada(Posicao origem, Posicao destino)
         {
             executaMovimento(origem, destino);
             turno++;
