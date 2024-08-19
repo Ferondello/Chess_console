@@ -38,6 +38,7 @@ namespace xadrez_console
             Console.WriteLine("Pecas capturadas: ");
             Console.Write("Brancas: ");
             imprimirConjunto(partida.pecasCapturadas(Cor.Branca));
+            Console.WriteLine();
             Console.Write("Pretas: ");
             ConsoleColor aux = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -57,7 +58,7 @@ namespace xadrez_console
         {
             for (int i = 0; i < tab.linhas; i++)
             {
-                Console.Write(8 - i + " ");
+                Console.Write(8 - i + " |");
                 for (int j = 0; j < tab.colunas; j++)
                 {
                     imprimirPeca(tab.peca(i, j));
@@ -65,7 +66,8 @@ namespace xadrez_console
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("  a b c d e f g h ");
+            Console.WriteLine("   ----------------");
+            Console.WriteLine("   a b c d e f g h ");
         }
         public static void imprimirTabuleiro(Tabuleiro tab, bool[,] posicoesPossiveis)
         {
